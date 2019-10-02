@@ -66,15 +66,13 @@ public class Usuario {
     
     public static boolean repetirJogo(boolean jogarNovamente, Scanner scan){
         
-        do{
-            System.out.println("Jogar novamente?\n Digite FALSE para não e TRUE para sim");
-            jogarNovamente = scan.nextBoolean();
-        }while(jogarNovamente && !jogarNovamente);
+        System.out.println("Jogar novamente?\n Digite false para não e true para sim");
+        jogarNovamente = scan.nextBoolean();
         
         return jogarNovamente;
     }
+    
     public static void fecharConexoes(Socket clientSocket, PrintWriter outToServer, BufferedReader inFromServer) throws IOException{
-        
         clientSocket.close();
         outToServer.close();
         inFromServer.close();
